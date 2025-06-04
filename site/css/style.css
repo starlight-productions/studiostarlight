@@ -1,0 +1,28 @@
+/* Basic site styles */
+
+/* TODO: Replace with an earth-tone color palette */
+body {
+    background-color: #f0eade; /* placeholder earth tone */
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d8cbb8; /* placeholder earth tone */
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+/* TODO: Add geometric motif patterns */
