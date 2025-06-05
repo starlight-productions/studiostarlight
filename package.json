@@ -2,6 +2,9 @@
   "name": "studiostarlight",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo \"Static site\" && exit 0"
+    "build": "node scripts/generate-newsfeed.js"
+  },
+  "dependencies": {
+    "marked": "^9.1.2"
   }
 }
