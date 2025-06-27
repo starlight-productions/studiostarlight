@@ -1,21 +1,24 @@
-/* Basic site styles with an earth‑tone palette */
+/* Base styles with Studio Ghibli inspired palette */
 body {
-    background-color: #f6f1e9;
-    color: #3b2f2f;
+    background-color: #f5f4e8;
+    color: #2f372e;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #d4b483;
-    padding: 1em;
+    background-color: #8ba888;
+    color: #fff;
+    padding: 1em 0;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav li {
@@ -23,8 +26,64 @@ nav li {
     margin: 0 0.5em;
 }
 
-/* Simple geometric motif for section headers */
+nav a {
+    color: #2f372e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 h1, h2 {
-    border-bottom: 4px solid #a67c52;
+    border-bottom: 4px solid #5f7a62;
     padding-bottom: 0.3em;
+    font-family: 'Georgia', serif;
+}
+
+/* Layout helpers */
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 960px;
+}
+
+.two-column {
+    display: flex;
+    gap: 2%;
+}
+
+.blog-column {
+    flex: 1;
+    padding: 1em;
+}
+
+.blog-left {
+    background-color: #e6e8dc;
+}
+
+.blog-right {
+    background-color: #d0d7c5;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border: 4px solid #5f7a62;
+    box-sizing: border-box;
+}
+
+.bio {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.bio img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    border: 4px solid #5f7a62;
 }
