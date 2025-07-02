@@ -1,1 +1,13 @@
-# .htaccess routing placeholder
+# public/.htaccess
+# ------------------------------------------------------------------------------
+# Send all non-file/non-dir requests to index.php
+# ------------------------------------------------------------------------------
+
+# If the requested resource exists as a file or directory, serve it directly
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Optional: Force UTF-8 for text files
+AddDefaultCharset utf-8
