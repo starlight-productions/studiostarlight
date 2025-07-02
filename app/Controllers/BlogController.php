@@ -1,11 +1,13 @@
 <?php
 namespace App\Controllers;
+use App\Models\Post;
 use function view;  
 class BlogController
 {
     public static function index(): string
     {
-        $content = \view('blog');
+        $posts   = Post::latest();               // ‹— NEW
+        $content = \view('blog',compact('posts'));
 
         return self::render('Blog', $content);
     }
