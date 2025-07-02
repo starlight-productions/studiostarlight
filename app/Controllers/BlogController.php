@@ -1,12 +1,11 @@
 <?php
 namespace App\Controllers;
-
+use function view;  
 class BlogController
 {
     public static function index(): string
     {
-        $content = '<h2 class="text-xl font-rounded">Welcome to Studio Starlight</h2>
-                    <p class="mt-4">Blog page placeholder.</p>';
+        $content = \view('blog');
 
         return self::render('Blog', $content);
     }

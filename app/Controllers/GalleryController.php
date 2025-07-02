@@ -1,12 +1,11 @@
 <?php
 namespace App\Controllers;
-
+use function view;  
 class GalleryController
 {
     public static function index(): string
     {
-        $content = '<h2 class="text-xl font-rounded">Welcome to Studio Starlight</h2>
-                    <p class="mt-4">Gallery page placeholder.</p>';
+        $content = \view('gallery'); 
 
         return self::render('Gallery', $content);
     }

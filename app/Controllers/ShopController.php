@@ -1,12 +1,11 @@
 <?php
 namespace App\Controllers;
-
+use function view;  
 class ShopController
 {
     public static function index(): string
     {
-        $content = '<h2 class="text-xl font-rounded">Shop</h2>
-                    <p class="mt-4">Shop page placeholder.</p>';
+        $content = \view('shop'); 
 
         return self::render('Shop', $content);
     }
