@@ -1,0 +1,11 @@
+{
+  "name": "studio/starlight",
+  "description": "Studio Starlight artist site",
+  "type": "project",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+/vendor
+
+# compiled assets
+/public/assets/css/site.css
+
+# logs and temp
+/storage
