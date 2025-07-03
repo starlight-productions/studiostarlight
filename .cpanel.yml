@@ -1,7 +1,11 @@
 deployment:
   tasks:
-    # 1) where the live site is served from
-    - export DEPLOY_PATH=/home/studsmut/public_html
+    # paths
+    - export REPO_ROOT=/home/studsmut/repositories/studiostarlight
+    - export WEB_ROOT=/home/studsmut/public_html
 
-    # 2) mirror repo → web root (delete files that disappear from Git)
-    - /bin/rsync -av --delete --exclude=".git" ./ $DEPLOY_PATH/
+    # 1) install PHP deps (optional)
+    # - /usr/local/bin/composer --working-dir=$REPO_ROOT install --no-dev --optimize-autoloader
+
+    # 2) mirror “public” folder into the web root
+    - /bin/rsync -av --delete --exclude=".git"  $REPO_ROOT/public/  $WEB_ROOT/
