@@ -1,0 +1,7 @@
+deployment:
+  tasks:
+    # 1) where the live site is served from
+    - export DEPLOY_PATH=/home/studsmut/public_html
+
+    # 2) mirror repo → web root (delete files that disappear from Git)
+    - /bin/rsync -av --delete --exclude=".git" ./ $DEPLOY_PATH/
