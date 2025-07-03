@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
-require dirname(__DIR__) . '/vendor/autoload.php';
-require dirname(__DIR__) . '/app/helpers.php';   
-require dirname(__DIR__) . '/vendor/autoload.php';
+
+require __DIR__ . '/vendor/autoload.php';   // path is now inside public_html
+require __DIR__ . '/app/helpers.php';       // idem
 
 use App\Controllers\HomeController;
 use App\Controllers\BlogController;

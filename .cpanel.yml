@@ -1,11 +1,13 @@
 deployment:
   tasks:
-    # paths
-    - export REPO_ROOT=/home/studsmut/repositories/studiostarlight
-    - export WEB_ROOT=/home/studsmut/public_html
+    - export REPO=/home/studsmut/repositories/studiostarlight
+    - export LIVE=/home/studsmut/public_html
 
-    # 1) install PHP deps (optional)
-    # - /usr/local/bin/composer --working-dir=$REPO_ROOT install --no-dev --optimize-autoloader
+    - /usr/local/bin/composer --working-dir=$REPO install --no-dev --optimize-autoloader
 
-    # 2) mirror “public” folder into the web root
-    - /bin/rsync -av --delete --exclude=".git"  $REPO_ROOT/public/  $WEB_ROOT/
+    # copy web assets
+    - /bin/rsync -av --delete --exclude=".git" $REPO/public/  $LIVE/
+
+    # copy vendor + app inside public_html
+    - /bin/rsync -av --delete --exclude=".git" $REPO/vendor/  $LIVE/vendor/
+    - /bin/rsync -av --delete --exclude=".git" $REPO/app/     $LIVE/app/
