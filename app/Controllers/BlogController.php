@@ -6,7 +6,7 @@ class BlogController
 {
     public static function index(): string
     {
-        $posts   = Post::latest();               // ‹— NEW
+        $posts = Post::latest();            // ‹— NEW
         $content = \view('blog',compact('posts'));
 
         return self::render('Blog', $content);
